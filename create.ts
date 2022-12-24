@@ -12,8 +12,8 @@ export function loadWalletKey(keypairFile:string): web3.Keypair {
 
 async function main(){
     console.log("naming tokens");
-    const myKeypair = loadWalletKey("AndXYwDqSeoZHqk95TUC1pPdp93musGfCo1KztNFNBhd.json");
-    const mint = new web3.PublicKey("FUDMHraEkdj926Tu75aYHtokoHM8QgGN2Nx8TJr8eSZM");
+    const myKeypair = loadWalletKey("tokenWallet.json");
+    const mint = new web3.PublicKey("token address");
     const seed1 = Buffer.from(anchor.utils.bytes.utf8.encode("metadata"));
     const seed2 = Buffer.from(mpl.PROGRAM_ID.toBytes());
     const seed3 = Buffer.from(mint.toBytes());
