@@ -14,7 +14,7 @@ export function loadWalletKey(keypairFile:string): web3.Keypair {
 async function main(){
     console.log("updating tokens");
     const myKeypair = loadWalletKey("tokenWallet.json");
-    const mint = new web3.PublicKey("MECHjowzMbzBy9KkkACqMn45WX41HCvmN6sWNPPQvKn");
+    const mint = new web3.PublicKey("token Address");
     const seed1 = Buffer.from(anchor.utils.bytes.utf8.encode("metadata"));
     const seed2 = Buffer.from(mpl.PROGRAM_ID.toBytes());
     const seed3 = Buffer.from(mint.toBytes());
@@ -27,9 +27,9 @@ async function main(){
         updateAuthority: myKeypair.publicKey,
     }
     const dataV2 = {
-        name: "THE MECHANICS",
-        symbol: "$MECH",
-        uri: "https://cdn.discordapp.com/attachments/1035037599280156733/1056078703119044740/MECH_1.png",
+        name: "",
+        symbol: "",
+        uri: "",
         sellerFeeBasisPoints: 0,
         creators: null,
         collection: null,
